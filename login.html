@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - ABIR SMM PANEL</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080e1c;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  background: #15243b;
+  border: 1px solid #293954;
+  border-radius: 18px;
+  padding: 35px 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.logo {
+  text-align: center;
+  color: #00d6a0;
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #b9c3d5;
+  margin-bottom: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #dce5f2;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  background: #080e1c;
+  color: white;
+  border: 1px solid #35445d;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #00d6a0;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #00d6a0;
+  color: #071322;
+  border: none;
+  border-radius: 9px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register {
+  text-align: center;
+  margin-top: 25px;
+  color: #b9c3d5;
+}
+
+.register a {
+  color: #00d6a0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home {
+  display: block;
+  text-align: center;
+  margin-top: 22px;
+  color: #00d6a0;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+  <h1 class="logo">ABIR SMM</h1>
+  <p class="subtitle">Welcome Back!</p>
+
+  <h2>Customer Login</h2>
+
+  <form onsubmit="event.preventDefault(); alert('Login system is not connected yet.');">
+
+    <label>Email Address</label>
+    <input type="email" placeholder="Enter your email" required>
+
+    <label>Password</label>
+    <input type="password" placeholder="Enter your password" required>
+
+    <button type="submit">Login</button>
+
+  </form>
+
+  <p class="register">
+    Don't have an account?
+    <a href="register.html">Register Now</a>
+  </p>
+
+  <a class="home" href="index.html">← Back to Home</a>
+
+</div>
+
+</body>
+</html>
