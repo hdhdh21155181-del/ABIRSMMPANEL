@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deposit & Verify - ABIR SMM PANEL</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #080e1c;
+        color: white;
+        margin: 0;
+        padding: 20px;
+    }
+    h2, h3 {
+        text-align: center;
+        color: #00d6a0;
+    }
+    .payment-container, .verify-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #111d33;
+        border: 1px solid #293954;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .method-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #293954;
+        font-size: 1.1em;
+    }
+    .method-number {
+        color: #00d6a0;
+        font-weight: bold;
+        font-family: monospace;
+        background: #080e1c;
+        padding: 6px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .method-number:hover {
+        background: #192a4a;
+    }
+    .copy-hint {
+        font-size: 0.8em;
+        color: #8fa9c4;
+        text-align: center;
+        display: block;
+        margin-top: 5px;
+    }
+    .limit-info {
+        text-align: center;
+        color: #ffaa00;
+        margin: 15px 0;
+        font-weight: bold;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    input {
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #293954;
+        background: #080e1c;
+        color: white;
+        font-size: 1em;
+        text-align: center;
+    }
+    button {
+        padding: 15px;
+        background-color: #00d6a0;
+        color: #080e1c;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+    button:disabled {
+        background-color: #555;
+        color: #ccc;
+    }
+    #status-message {
+        text-align: center;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #00d6a0;
+        min-height: 24px;
+    }
+</style>
+</head>
+<body>
+
+<h2>ABIR SMM PANEL</h2>
+
+<div class="payment-container">
+    <h3>Payment Methods</h3>
+    <span class="copy-hint">(নম্বরে ট্যাপ করে কপি করুন)</span>
+    
+    <div class="method-card">
+        <span>bKash</span>
+        <span class="method-number" onclick="copyNumber('01601951690')">01601951690</span>
+    </div>
+    <div class="method-card">
+        <span>Upay</span>
+        <span class="method-number" onclick="copyNumber('01601951690')">01601951690</span>
+    </div>
+    <div class="method-card">
+        <span>Rocket</span>
+        <span class="method-number" onclick="copyNumber('01759248346')">01759248346</span>
+    </div>
+    <div class="method-card">
+        <span>Nagad</span>
+        <span class="method-number" onclick="copyNumber('017592486')">017592486</span>
+    </div>
+    
+    <div class="limit-info">
+        * লিমিট: সর্বনিম্ন ১০০ টাকা - সর্বোচ্চ ২৫,০০০ টাকা
+    </div>
+</div>
+
+<div class="verify-container">
+    <h3>Verify your transaction</h3>
+    <form id="verify-form">
+        <input type="text" id="txid" placeholder="Enter Transaction ID" required>
+        <button type="submit" id="verify-btn">Verify your transaction</button>
+    </form>
+    <div id="status-message"></div>
+</div>
+
+<script>
+    function copyNumber(number) {
+        if (!navigator.clipboard) {
+            fallbackCopyTextToClipboard(number);
+            return;
+        }
+        navigator.clipboard.writeText(number).then(function() {
+            alert("নম্বরটি কপি করা হয়েছে: " + number);
+        }).catch(function(err) {
+            fallbackCopyTextToClipboard(number);
+        });
+    }
+
+    function fallbackCopyTextToClipboard(text) {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? "নম্বরটি কপি করা হয়েছে: " : "কপি করতে ব্যর্থ হয়েছে।";
+            alert(msg + text);
+        } catch (err) {
+            alert("কপি করার সময় ত্রুটি ঘটেছে।");
+        }
+        document.body.removeChild(textArea);
+    }
+
+    document.getElementById('verify-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('verify-btn');
+        const status = document.getElementById('status-message');
+        
+        btn.disabled = true;
+        status.innerText = "Verifying your transaction...";
+        
+        setTimeout(function() {
+            status.innerText = "Transaction Verified Successfully!";
+            btn.disabled = false;
+            document.getElementById('txid').value = '';
+        }, 3000);
+    });
+</script>
+
+</body>
+</html>
