@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel - ABIR SMM</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #080e1c;
+    color: white;
+}
+
+header {
+    background: #111d32;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+header h2 {
+    color: #00d6a5;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.container {
+    padding: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome p {
+    color: #aebbd0;
+    margin-top: 8px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #17263e;
+    border: 1px solid #2b3b58;
+    border-radius: 15px;
+    padding: 22px;
+}
+
+.card h3 {
+    color: #00d6a5;
+    margin-bottom: 14px;
+}
+
+.card h1 {
+    font-size: 30px;
+}
+
+.card p {
+    color: #b9c5d8;
+    margin-top: 10px;
+}
+
+.section {
+    background: #17263e;
+    border: 1px solid #2b3b58;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    overflow-x: auto;
+}
+
+.section h2 {
+    margin-bottom: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #35445d;
+}
+
+th {
+    color: #00d6a5;
+}
+
+.status {
+    color: #ffd166;
+}
+
+.btn {
+    display: inline-block;
+    background: #00d6a5;
+    color: #071321;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px 5px 5px 0;
+}
+
+.btn:hover {
+    background: #00b98e;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.menu a {
+    background: #17263e;
+    border: 1px solid #2b3b58;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #00d6a5;
+}
+
+footer {
+    text-align: center;
+    color: #9aa9bf;
+    padding: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>ABIR SMM ADMIN</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <div class="welcome">
+        <h1>Admin Dashboard</h1>
+        <p>Welcome to ABIR SMM PANEL Admin Area</p>
+    </div>
+
+    <div class="menu">
+        <a href="#overview">Overview</a>
+        <a href="#orders">Orders</a>
+        <a href="#customers">Customers</a>
+        <a href="#services">Services</a>
+    </div>
+
+    <div id="overview" class="stats">
+
+        <div class="card">
+            <h3>Total Customers</h3>
+            <h1>125</h1>
+            <p>Demo information</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Orders</h3>
+            <h1>350</h1>
+            <p>Demo information</p>
+        </div>
+
+        <div class="card">
+            <h3>Demo Revenue</h3>
+            <h1>৳5,000</h1>
+            <p>Not real money</p>
+        </div>
+
+        <div class="card">
+            <h3>Pending Orders</h3>
+            <h1>12</h1>
+            <p>Demo information</p>
+        </div>
+
+    </div>
+
+    <div id="orders" class="section">
+        <h2>Recent Orders</h2>
+
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Service</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>#1001</td>
+                <td>YouTube</td>
+                <td class="status">Pending</td>
+            </tr>
+
+            <tr>
+                <td>#1002</td>
+                <td>Facebook</td>
+                <td>Completed</td>
+            </tr>
+
+            <tr>
+                <td>#1003</td>
+                <td>Instagram</td>
+                <td class="status">Processing</td>
+            </tr>
+        </table>
+
+        <button class="btn" onclick="demo()">View All Orders</button>
+    </div>
+
+    <div id="customers" class="section">
+        <h2>Customer Management</h2>
+
+        <table>
+            <tr>
+                <th>Customer ID</th>
+                <th>Name</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>#C001</td>
+                <td>Demo Customer</td>
+                <td>Active</td>
+            </tr>
+
+            <tr>
+                <td>#C002</td>
+                <td>Test User</td>
+                <td>Active</td>
+            </tr>
+        </table>
+
+        <button class="btn" onclick="demo()">View Customers</button>
+    </div>
+
+    <div id="services" class="section">
+        <h2>Services Management</h2>
+
+        <p>YouTube, Facebook, Instagram, TikTok, X, Likee, Snapchat, Telegram and Freedom.</p>
+
+        <br>
+        <button class="btn" onclick="demo()">Manage Services</button>
+    </div>
+
+</div>
+
+<footer>
+    ABIR SMM PANEL © 2026
+    <p>Admin Demo Panel</p>
+</footer>
+
+<script>
+function demo() {
+    alert("This is a demo feature. Backend connection is required.");
+}
+</script>
+
+</body>
+</html>
