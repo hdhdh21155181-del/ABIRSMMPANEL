@@ -1,64 +1,243 @@
-html
-.buy-btn:hover {
-background-color: #ffffff;
-}
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services Catalog - ABIR SMM PANEL</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #080e1c;
+        color: white;
+        margin: 0;
+        padding: 20px;
+    }
+    h2 {
+        text-align: center;
+        color: #00d6a0;
+        margin-bottom: 30px;
+    }
+    .platform-section {
+        margin-bottom: 40px;
+        padding-top: 20px;
+    }
+    .platform-title {
+        color: #ffffff;
+        border-bottom: 2px solid #00d6a0;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .service-card {
+        background-color: #111d33;
+        border: 1px solid #293954;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+        transform: translateY(-5px);
+        border-color: #00d6a0;
+    }
+    .service-card h3 {
+        margin: 0 0 10px 0;
+        color: #ffffff;
+    }
+    .price {
+        font-size: 1.3em;
+        color: #00d6a0;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .unit {
+        font-size: 0.9em;
+        color: #8fa9c4;
+        margin-bottom: 15px;
+    }
+    .buy-btn {
+        display: inline-block;
+        background-color: #00d6a0;
+        color: #080e1c;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .buy-btn:hover {
+        background-color: #ffffff;
+    }
 </style>
 </head>
-<body><h2>Services Catalog</h2><div class="services-grid">
+<body>
+
+<h2>Services Catalog</h2>
+
+<!-- YouTube -->
+<div id="youtube" class="platform-section">
+    <h3 class="platform-title">YouTube Services</h3>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>YouTube Subscribers</h3>
+            <div class="price">৳১৪০</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="service-card">
+            <h3>YouTube Views</h3>
+            <div class="price">৳১৭০</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="service-card">
+            <h3>YouTube Likes</h3>
+            <div class="price">৳১৪০</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+</div>
+
 <!-- Facebook -->
-<div class="service-card">
-<h3>Facebook Followers</h3>
-<div class="price">৳220</div>
-<div class="unit">per 1k</div>
-<a href="#" class="buy-btn">Buy Now</a>
+<div id="facebook" class="platform-section">
+    <h3 class="platform-title">Facebook Services</h3>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Facebook Followers</h3>
+            <div class="price">৳২২০</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="service-card">
+            <h3>Facebook Likes</h3>
+            <div class="price">৳১২৫</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="service-card">
+            <h3>Facebook Video Views</h3>
+            <div class="price">৳৫০</div>
+            <div class="unit">পার ১ هزار (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
 </div>
-<div class="service-card">
-<h3>Facebook Likes</h3>
-<div class="price">৳125</div>
-<div class="unit">per 1k</div>
-<a href="#" class="buy-btn">Buy Now</a>
+
+<!-- Instagram -->
+<div id="instagram" class="platform-section">
+    <h3 class="platform-title">Instagram Services</h3>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Instagram Followers</h3>
+            <div class="price">৳২৩৫</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="service-card">
+            <h3>Instagram Likes</h3>
+            <div class="price">৳১২০</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="service-card">
+            <h3>Instagram Views</h3>
+            <div class="price">৳১০০</div>
+            <div class="unit">নিন্মতম অর্ডার ৫ হাজার (5k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
 </div>
-<div class="service-card">
-<h3>Facebook Video Views</h3>
-<div class="price">৳50</div>
-<div class="unit">per 1k</div>
-<a href="#" class="buy-btn">Buy Now</a>
-</div> <!-- Instagram -->
-<div class="service-card">
-<h3>Instagram Followers</h3>
-<div class="price">৳235</div>
-<div class="unit">per 1k</div>
-<a href="#" class="buy-btn">Buy Now</a>
+
+<!-- TikTok -->
+<div id="tiktok" class="platform-section">
+    <h3 class="platform-title">TikTok Services</h3>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>TikTok Views</h3>
+            <div class="price">৳১০</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
 </div>
-<div class="service-card">
-<h3>Instagram Likes</h3>
-<div class="price">৳120</div>
-<div class="unit">per 1k</div>
-<a href="#" class="buy-btn">Buy Now</a>
+
+<!-- X (Twitter) -->
+<div id="twitter" class="platform-section">
+    <h3 class="platform-title">X (Twitter) Services</h3>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>X (Twitter) Followers</h3>
+            <div class="price">৳৫২০</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="service-card">
+            <h3>X (Twitter) Likes</h3>
+            <div class="price">৳২৪০</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
 </div>
-<div class="service-card">
-<h3>Instagram Views</h3>
-<div class="price">৳100</div>
-<div class="unit">Min order 5k</div>
-<a href="#" class="buy-btn">Buy Now</a>
-</div> <!-- TikTok -->
-<div class="service-card">
-<h3>TikTok Views</h3>
-<div class="price">৳10</div>
-<div class="unit">per 1k</div>
-<a href="#" class="buy-btn">Buy Now</a>
-</div> <!-- X (Twitter) -->
-<div class="service-card">
-<h3>X (Twitter) Followers</h3>
-<div class="price">৳520</div>
-<div class="unit">per 1k</div>
-<a href="#" class="buy-btn">Buy Now</a>
+
+<!-- Likee -->
+<div id="likee" class="platform-section">
+    <h3 class="platform-title">Likee Services</h3>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Likee Fans</h3>
+            <div class="price">৳১৪০</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
 </div>
-<div class="service-card">
-<h3>X (Twitter) Likes</h3>
-<div class="price">৳240</div>
-<div class="unit">per 1k</div>
-<a href="#" class="buy-btn">Buy Now</a>
+
+<!-- Snapchat -->
+<div id="snapchat" class="platform-section">
+    <h3 class="platform-title">Snapchat Services</h3>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Snapchat Views</h3>
+            <div class="price">৳১৭০</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
 </div>
-</div></body>
+
+<!-- Telegram -->
+<div id="telegram" class="platform-section">
+    <h3 class="platform-title">Telegram Services</h3>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Telegram Members</h3>
+            <div class="price">৳১৪০</div>
+            <div class="unit">পার ১ হাজার (1k)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+</div>
+
+<!-- Freedom -->
+<div id="freedom" class="platform-section">
+    <h3 class="platform-title">Freedom VIP Service</h3>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Freedom VIP</h3>
+            <div class="price">৳৬০০</div>
+            <div class="unit">মাসিক (month)</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
