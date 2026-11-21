@@ -1,0 +1,233 @@
+html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - ABIR SMM PANEL</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080e1c;
+    color: #ffffff;
+}
+
+header {
+    background: #111d32;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.logo {
+    color: #00d6a3;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 12px;
+}
+
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome h1 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #b8c4d8;
+}
+
+.balance-card {
+    background: linear-gradient(135deg, #00bd91, #008fbd);
+    color: #071321;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+}
+
+.balance-card p {
+    font-size: 16px;
+}
+
+.balance-card h2 {
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.balance-card small {
+    font-size: 13px;
+}
+
+.section-title {
+    margin: 25px 0 15px;
+    font-size: 21px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: #17263e;
+    border: 1px solid #293a57;
+    border-radius: 14px;
+    padding: 22px 15px;
+}
+
+.card h3 {
+    color: #00d6a3;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.card p {
+    color: #c3cddd;
+    font-size: 14px;
+}
+
+.action {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #00d6a3;
+    color: #071321;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.service {
+    background: #17263e;
+    border: 1px solid #293a57;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    color: #00d6a3;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #8795aa;
+    padding: 30px 10px;
+    margin-top: 30px;
+}
+
+@media (max-width: 400px) {
+    .grid, .service-list {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ABIR SMM</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <div class="welcome">
+        <h1>Customer Dashboard</h1>
+        <p>Welcome to ABIR SMM PANEL</p>
+    </div>
+
+    <div class="balance-card">
+        <p>Available Balance</p>
+        <h2>৳ 0.00</h2>
+        <small>Demo balance - Not real money</small>
+    </div>
+
+    <h2 class="section-title">Quick Actions</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Add Balance</h3>
+            <p>Add funds to your wallet.</p>
+            <a href="#" class="action">Add Balance</a>
+        </div>
+
+        <div class="card">
+            <h3>Place New Order</h3>
+            <p>Explore available services.</p>
+            <a href="#services" class="action">New Order</a>
+        </div>
+
+        <div class="card">
+            <h3>Order History</h3>
+            <p>View your previous orders.</p>
+            <a href="#" class="action">View Orders</a>
+        </div>
+
+        <div class="card">
+            <h3>My Profile</h3>
+            <p>Customer account information.</p>
+            <a href="#" class="action">My Profile</a>
+        </div>
+
+    </div>
+
+    <h2 class="section-title" id="services">All Services</h2>
+
+    <div class="service-list">
+        <div class="service">YouTube</div>
+        <div class="service">Facebook</div>
+        <div class="service">Instagram</div>
+        <div class="service">TikTok</div>
+        <div class="service">X (Twitter)</div>
+        <div class="service">Likee</div>
+        <div class="service">Snapchat</div>
+        <div class="service">Telegram</div>
+        <div class="service">Freedom</div>
+    </div>
+
+    <a href="login.html" class="action">Logout</a>
+
+</div>
+
+<footer>
+    © 2026 ABIR SMM PANEL
+    <br><br>
+    All Rights Reserved.
+</footer>
+
+</body>
+</html>
